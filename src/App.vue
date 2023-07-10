@@ -1,26 +1,23 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<script setup>
+    import Sidebar from './components/Sidebar.vue'
+    import Gallery from './components/Gallery.vue'
+    import {ref} from 'vue'
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+    const colorOfGallery = ref(true)
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    const changeColorScale = (color) => {
+        colorOfGallery.value = color
+    }
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+    <v-app>
+        <Sidebar @changeColor="changeColorScale" />
+        <v-main>
+            <Gallery :color="colorOfGallery"/>
+        </v-main>
+    </v-app>
+</template>
+
+
