@@ -10,7 +10,7 @@
 </script>
 
 <template>
-    <v-navigation-drawer expand-on-hover rail>
+    <v-navigation-drawer app expand-on-hover rail :permanent="true">
         <v-list>
           <v-list-item
             prepend-avatar="https://i1.sndcdn.com/artworks-5aDBMLz7U2zE8hoL-D0dFww-t500x500.jpg"
