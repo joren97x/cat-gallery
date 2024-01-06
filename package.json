@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "axios": "^1.6.3",
     "core-js": "^3.8.3",
     "roboto-fontface": "*",
     "vue": "^3.2.13",
-    "vuetify": "^3.0.0-beta.0",
+    "vue-router": "^4.2.5",
+    "vuetify": "^3.4.9",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {

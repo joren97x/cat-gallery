@@ -1,21 +1,13 @@
 <script setup>
-    import Sidebar from './components/Sidebar.vue'
-    import Gallery from './components/Gallery.vue'
-    import {ref} from 'vue'
-
-    const colorOfGallery = ref(true)
-
-    const changeColorScale = (color) => {
-        colorOfGallery.value = color
-    }
-
+    import {RouterView} from 'vue-router'
 </script>
 
 <template>
     <v-app>
-        <Sidebar @changeColor="changeColorScale" />
         <v-main>
-            <Gallery :color="colorOfGallery"/>
+            <!-- <component :is="$route.meta.layout"> -->
+                <RouterView/>
+            <!-- </component> -->
         </v-main>
     </v-app>
 </template>
